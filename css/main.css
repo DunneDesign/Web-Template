@@ -1,4 +1,8 @@
 /* Styling + Brand Variables */
+
+
+/* STYLE -------- Orange Black and white Sans Serif*/
+
       :root {
           --main-color: #ff5733;
           --secondary-color: #005ebd;
@@ -7,13 +11,133 @@
           --neutral-light: #ffffff;
       }
 
-      * {
+        * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: system-ui, -apple-system, sans-serif;
       }
 
+
+
+
+    
+
+    /* STYLE -------- blue orange sans serif */
+    /*
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+      :root {
+          --main-color: #dd5617;
+          --secondary-color: #005ebd;
+          --neutral-dark: #020a58;
+          --neutral-mid: #315585;
+          --neutral-light: #d8fdff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /*font-family: serif; */
+        /*
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 900;
+      }
+
+      p, a {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        font-size: 1.5em;
+      }
+
+      label, input, textarea, button {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        font-size: 1.5em;
+      }
+
+      */
+
+
+
+      
+        
+
+        
+      /* STYLE -------- Tan brown script */
+/*
+        @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Molle:ital@1&display=swap');
+
+      :root {
+          --main-color: #ffb039;
+          --secondary-color: #bd9100;
+          --neutral-dark: #381705;
+          --neutral-mid: #83360c;
+          --neutral-light: #feffd8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Molle", cursive;
+        /*font-family: "Alex Brush", cursive; */
+        /*
+      }
+
+      p, a {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+      }
+
+      label, input, textarea, button {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+      }
+*/
+
+
+
+
+      
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Manufacturing+Consent&display=swap');
+
+      :root {
+          --main-color: #414141;
+          --secondary-color: #000000;
+          --neutral-dark: #000000;
+          --neutral-mid: #7a7a7a;
+          --neutral-light: #e0e0e0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Manufacturing Consent", system-ui;
+          font-style: normal;
+
+        
+  /*font-family: "Iceberg", sans-serif; */
+  /*
+        font-weight: 400;
+      }
+
+      p, a {
+        font-family: serif;
+        font-weight: 400;
+        font-size: 1em;
+      }
+      */
+
+a.button-links {
+  border-width: 0.1em;
+  border-color: #000;
+}
+      
       h1 {
         font-size: clamp(2.5em, 8vw, 5em);
       }
@@ -42,7 +166,9 @@
         overflow-x: hidden;
       }
 
-      .dark-section {
+      
+
+      section.dark-section {
         background-color: var(--neutral-dark);
         color: var(--neutral-light);
 
@@ -55,9 +181,52 @@
       }
 
       section {
+        background-color: var(--neutral-light);
+        color: var(--neutral-dark);
         padding: 2.5rem;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+
+      form.vertical-list {
+        list-style: none;
+        width: 100%;
+      }
+      form.vertical-list label {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--neutral-mid); /* Matches body <p> text color */
+        margin-bottom: 0.5rem;
+      }
+      form.vertical-list input, 
+      form.vertical-list textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid var(--neutral-dark);
+        border-radius: 8px;
+        
+        font-size: 1rem;
+        color: var(--neutral-dark);
+        background-color: var(--neutral-light);
+        margin-bottom: 1.5rem;
+        transition: border-color 0.3s ease;
+      }
+      form.vertical-list input:focus, 
+      form.vertical-list textarea:focus {
+        outline: none;
+        border-color: var(--main-color); /* Subtle interactive color change */
+      }
+      form.vertical-list textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+      /* Clean button adjustments to native button tag so it mimics your <a> markup */
+      form.vertical-list button.button-links {
+        display: inline-block;
+        width: auto;
+        cursor: pointer;
+        outline: none;
       }
 
       /* Border Div */
@@ -67,6 +236,9 @@
         border-radius: 5px;
         margin-bottom: 2rem;
         /*margin-top: 2em */
+        max-width: 50vw;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .container {
@@ -178,7 +350,7 @@
         padding: 1rem;
         border-radius: 50px;
         font-weight: bold;
-        font-size: 1em;
+        
         border: none;
       }
 
@@ -415,14 +587,14 @@
       .placeholder-logo {
         width: 160px;
         height: 50px;
-        background-color: #f0f0f0;
-        border: 2px dashed #ccc;
+        background-color: var(--neutral-mid);
+        border: 2px dashed var(--neutral-dark);
         border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 600;
-        color: var(--neutral-mid);
+        color: var(--neutral-light);
         font-size: 0.9rem;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -430,9 +602,10 @@
       }
 
       .placeholder-logo:hover {
-        background-color: #e8e8e8;
+        background-color: var(--neutral-light);
         border-color: var(--main-color);
-        color: var(--neutral-dark);
+        color: var(--main-color);
+        cursor: pointer;
       }
 
       /* Logo animation loop
